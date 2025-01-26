@@ -68,8 +68,8 @@ const TaskForm = ({ onSubmit, initialData = null }) => {
                     onChange={(e) => setTask({...task, status: e.target.value})}
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 >
-                    <option value="PENDING">DONE</option>
-                    <option value="IN_PROGRESS">DOING</option>
+                    <option value="DONE">DONE</option>
+                    <option value="DOING">DOING</option>
                 </select>
             </div>
 

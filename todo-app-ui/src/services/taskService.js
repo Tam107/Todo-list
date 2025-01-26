@@ -23,7 +23,7 @@ const taskService = {
     },
 
     updateTask: async(id, task) =>{
-        const response = await axios.put(`${API_URL}/${id}`, task);
+        const response = await axios.put(`${API_URL}/update/${id}`, task);
         return response.data;
     },
 
@@ -31,7 +31,7 @@ const taskService = {
         await axios.delete(`${API_URL}/delete/${id}`);
     },
     deleteAllTasks: async() =>{
-        await axios.delete(`${API_URL}`);
+        await axios.delete(`${API_URL}/delete`);
     }
 
 }

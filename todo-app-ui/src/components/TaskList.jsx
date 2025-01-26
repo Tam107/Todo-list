@@ -43,6 +43,11 @@ const TaskList = ({ onEdit }) => {
         return pageNumbers;
     };
 
+    const handleSearch = (e) => {
+        setKeyword(e.target.value);
+        setPage(0); // Reset to first page when searching
+    };
+
     // Handle page change
     const handlePageChange = (newPage) => {
         setPage(newPage - 1);
@@ -56,7 +61,7 @@ const TaskList = ({ onEdit }) => {
                     type="text"
                     placeholder="Search tasks..."
                     value={keyword}
-                    onChange={(e) => setKeyword(e.target.value)}
+                    onChange={handleSearch}
                     className="px-4 py-2 border rounded-md w-64"
                 />
             </div>
